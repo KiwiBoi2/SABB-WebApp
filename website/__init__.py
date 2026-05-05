@@ -11,6 +11,7 @@ DB_NAME = "database.db"
 def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = ")Ld{<oDfg}7^{@WY[r2y<EsQHay6[TEi"
+    app.config["SQL_ALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_NAME}"
 
     # import views from views.py
     from .views import views
