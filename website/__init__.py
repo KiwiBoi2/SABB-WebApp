@@ -12,6 +12,7 @@ def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = ")Ld{<oDfg}7^{@WY[r2y<EsQHay6[TEi"
     app.config["SQL_ALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_NAME}"
+    db.init_app(app)
 
     # import views from views.py
     from .views import views
@@ -21,6 +22,10 @@ def create_app():
     # register blueprints
     app.register_blueprint(views, url_prefix="/")
     app.register_blueprint(auth, url_prefix="/")
+    
+    from .models import user
 
+    with app.app_context():
+        db.create_all
 
     return app
