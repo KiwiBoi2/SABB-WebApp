@@ -16,6 +16,28 @@ auth = Blueprint("auth", "__name__")
 # sign up function
 # returns sign_up page
 def sign_up():
+    # signup function
+    # returns signup page
+    if request.method == "POST":
+        email = request.form.get("email")
+        username = request.form.get("username")
+        password1 = request.form.get("password1")
+        password2 = request.form.get("password2")
+
+    email_exists = User.query.filter_by(email=email).first()
+    username_exists = User.query.filter_by(username=username).first()
+
+    if email_exists:
+        flash("Email is already in use.", category="error")
+    elif username_exists:
+        flash("Username is already in use.", category="error")
+    elif password1 != password2:
+        flash("Passwords do not match!", category="error")
+    elif len(password1) < 8:
+        flash("Password is too short!", category="error")
+    elif len(username) < 2:
+        flash("Username is too short!", category="error")
+
     return render_template("sign_up.html")
 
 # login route
