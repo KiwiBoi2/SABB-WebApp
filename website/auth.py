@@ -1,11 +1,11 @@
 # import external libraries
-from flask import Blueprint, render_template
-
+from flask import Blueprint, render_template, request, flash, url_for
+from flask_login import login_user, logout_user, login_required, current_user
+from werkzeug.security import generate_password_hash, check_password_hash
 # import database
 from . import db
 # import from .models user
 from .models import User
-
 
 # set auth blueprint
 auth = Blueprint("auth", "__name__")
