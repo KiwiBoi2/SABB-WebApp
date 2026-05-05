@@ -27,5 +27,13 @@ def create_app():
 
     with app.app_context():
         db.create_all()
+    
+    LoginManager = LoginManager()
+    LoginManager.login_view = "auth.login" 
+    LoginManager.init_app(app)
+
+    @LoginManager.user_loader
+    def load_user(id):
+        return User.query.get(int(id))
 
     return app
