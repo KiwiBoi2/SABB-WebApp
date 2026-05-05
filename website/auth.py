@@ -6,7 +6,7 @@ auth = Blueprint("auth", "__name__")
 
 
 # sign up route
-@auth.route("/sign-up")
+@auth.route("/sign-up", methods=["GET","POST"])
 # sign up function
 # returns sign_up page
 def sign_up():
