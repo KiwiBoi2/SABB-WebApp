@@ -1,6 +1,12 @@
 # import external libraries
 from flask import Blueprint, render_template
 
+# import database
+from . import db
+# import from .models user
+from .models import User
+
+
 # set auth blueprint
 auth = Blueprint("auth", "__name__")
 
