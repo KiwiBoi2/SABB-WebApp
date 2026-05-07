@@ -58,7 +58,7 @@ def sign_up():
     return render_template("sign_up.html")
 
 # login route
-@auth.route("/login")
+@auth.route("/login", methods=["GET","POST"])
 # login function
 # returns login page
 def login():
@@ -68,7 +68,16 @@ def login():
 
         user = User.query.filter_by(email=email).first()
         if user:
-            
+            if check_password_hash(user.password, password):
+                flash("Logged in successfully!", category="success") 
+                login_user(user, remember=True)
+                return redirect(url_for("views.home"))
+            else:
+                flash("Incorrect password!", category="error")
+        else:
+            flash("Email does not exist!", category="error")
+
+
     return render_template("login.html")
 
 # logout route
