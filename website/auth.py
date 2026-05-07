@@ -88,7 +88,9 @@ def login():
 
 # logout route
 @auth.route("/logout")
+@login_required
 # logout function
 # returns logout page   
 def logout():
-    return render_template("logout.html")
+    logout_user()
+    return redirect(url_for("views.home"))
