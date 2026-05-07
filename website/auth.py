@@ -24,8 +24,12 @@ def sign_up():
         password1 = request.form.get("password1")
         password2 = request.form.get("password2")
 
+        # check if email or username already exists
+
         email_exists = User.query.filter_by(email=email).first()
         username_exists = User.query.filter_by(username=username).first()
+
+        # validation of password, username and email
 
         if email_exists:
             flash("Email is already in use.", category="error")
@@ -40,6 +44,9 @@ def sign_up():
         elif len(email) < 4:
             flash("Email is not valid!", category="error")
         else:
+
+            # create new user and add to database
+
             new_user = User(email=email, username=username, password=generate_password_hash(password1, method="scrypt:32768:8:1"), date_created=db.func.now())
             db.session.add(new_user)
             db.session.commit()
