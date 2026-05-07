@@ -62,6 +62,13 @@ def sign_up():
 # login function
 # returns login page
 def login():
+    if request.method == "POST":
+        email = request.form.get("email")
+        password = request.form.get("password")
+
+        user = User.query.filter_by(email=email).first()
+        if user:
+            
     return render_template("login.html")
 
 # logout route
