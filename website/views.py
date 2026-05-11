@@ -20,5 +20,6 @@ def home():
 @views.route("/create-post", methods=["GET", "POST"])
 @login_required
 # create post route function
-# returns create_post page
+# returns create_post.html
 def create_post():
+    return render_template("create_post.html", user=current_user)
