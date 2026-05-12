@@ -1,10 +1,10 @@
 # import external libraries
 from flask import Blueprint, render_template, request, flash, url_for, redirect
-from flask_login import current_user, login_required, logout_user, login_user
+from flask_login import current_user, login_required
 
 # import database
 from . import db
-from .models import User, Post
+from .models import User
 
 # set views as blueprint 
 views = Blueprint("views", "__name__")
@@ -36,7 +36,7 @@ def create_post():
             flash("Blog cannot be empty", category="error")
         else:
             post = User(title=title, content=content, author=current_user.id)
-            db.session.add(new_post)
+            db.session.add(post)
             db.session.commit()
             flash("Post created!", category="success")
             return redirect(url_for("views.home"))
