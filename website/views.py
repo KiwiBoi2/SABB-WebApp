@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 
 # import database
 from . import db
-from .models import User
+from .models import User, Post
 
 # set views as blueprint 
 views = Blueprint("views", "__name__")
@@ -35,7 +35,7 @@ def create_post():
         elif not content:
             flash("Blog cannot be empty", category="error")
         else:
-            post = User(title=title, content=content, author=current_user.id)
+            post = Post(title=title, content=content, author=current_user.id, date_created=db.func.now())
             db.session.add(post)
             db.session.commit()
             flash("Post created!", category="success")
