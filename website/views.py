@@ -35,7 +35,7 @@ def create_post():
         elif not content:
             flash("Blog cannot be empty", category="error")
         else:
-            post = Post(title=title, content=content, author=current_user.id, date_created=db.func.now())
+            post = Post(title=title, content=content, author=current_user.id)
             db.session.add(post)
             db.session.commit()
             flash("Post created!", category="success")
