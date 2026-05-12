@@ -1,6 +1,11 @@
 # import external libraries
-from flask import Blueprint, render_template, request, flash, url_for
+from flask import Blueprint, render_template, request, flash, url_for, redirect
 from flask_login import current_user, login_required, logout_user, login_user
+
+# import database
+from . import db
+from .models import User, Post
+
 # set views as blueprint 
 views = Blueprint("views", "__name__")
 
