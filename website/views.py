@@ -43,3 +43,13 @@ def create_post():
 
 
     return render_template("create_post.html", user=current_user)
+
+
+# blog page route
+@views.route("/blog")
+# user must be logged in
+@login_required 
+# blog route function
+# returns blog page
+def blog():
+    return render_template("blog.html", user=current_user)
