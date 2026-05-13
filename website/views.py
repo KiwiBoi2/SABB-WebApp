@@ -52,4 +52,5 @@ def create_post():
 # blog route function
 # returns blog page
 def blog():
-    return render_template("blog.html", user=current_user)
+    posts = Post.query.all()
+    return render_template("blog.html", user=current_user, posts=posts)
