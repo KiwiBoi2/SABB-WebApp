@@ -20,18 +20,19 @@
         </div>
         <div class="card-footer text-muted">{{post.date_created}}</div>
     </div>
-
-    
+    <br/> 
     {% endfor %}
-
-
-
-
 </div>
-
-
-
-
-
+{% block footer %}
+<div align="center">
+    <a href="/create-post">
+        <button type="button" class="btn btn-primary btn-large">
+            Create Post
+        </button>
+    </a>
+    <br/>
+</div>
+<br/>
+{% endblock %}
 
 {% endblock %}
