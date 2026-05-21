@@ -44,6 +44,14 @@ def create_post():
 
     return render_template("create_post.html", user=current_user)
 
+# delete blog post route
+@views.route("/delete-post/<id>")
+# user must be logged in to delete
+@login_required
+def delete_post(id):
+    post = Post.query.filter_by(id=id).first()
+
+
 
 # blog page route
 @views.route("/blog")
