@@ -41,6 +41,14 @@
                         <div>
                             <a href="/posts/{{comment.user.username}}">{{comment.user.username}}</a>: {{comment.text}}
                         </div> 
+                        <div>
+                            <small class="text-muted">{{comment.date_created}}</small>
+                            {% if user.id == comment.author or user.id == post.author %}
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-small btn-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
+                            </div>
+                            {% endif %}
+                        </div>
                     </div>
                    
                    
