@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 
 # import database
 from . import db
-from .models import User, Post
+from .models import User, Post, Comment
 
 # set views as blueprint 
 views = Blueprint("views", "__name__")
