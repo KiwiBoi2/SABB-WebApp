@@ -10,7 +10,7 @@ from .models import User, Post
 views = Blueprint("views", "__name__")
 
 
-# default/home rout
+# default/home route
 @views.route("/")
 @views.route("/home")
 
@@ -19,6 +19,16 @@ views = Blueprint("views", "__name__")
 def home():
     return render_template("home.html", user=current_user)
     
+# blog page route
+@views.route("/blog")
+# user must be logged in
+@login_required 
+# blog route function
+# returns blog page
+def blog():
+    posts = Post.query.all()
+    return render_template("blog.html", user=current_user, posts=posts)
+
 
 # create blog post route
 @views.route("/create-post", methods=["GET", "POST"])
@@ -60,14 +70,23 @@ def delete_post(id):
         flash("Post deleted.", category="success")
     return redirect(url_for("views.blog"))
 
+# create  blog comment route
+@views.route("/create-comment/<post_id>", methods=['POST'])
+# user must be logged in to post
+@login_required
+def create_comment(post_id):
+    text = request.form.get("text")
+    if not text:
+        flash("Comment cannot be empty.", category="error")
+    else:
+        post = Post.query.filter_by(id=post_id)
+        if post:
+            comment = Comment(text=text, author=current_user.id, post_id=post_id)
+            db.session.add(comment)
+            db.session.commit()
+            flash("Comment added!", category="success")
+        else:
+            flash("Comment does not exist.", category="error")
+    return redirect(url_for("views.blog"))
 
 
-# blog page route
-@views.route("/blog")
-# user must be logged in
-@login_required 
-# blog route function
-# returns blog page
-def blog():
-    posts = Post.query.all()
-    return render_template("blog.html", user=current_user, posts=posts)
