@@ -91,7 +91,7 @@ def create_comment(post_id):
 
 
 # delete blog comment route
-@views.route("/delete-comment/<comment_id")
+@views.route("/delete-comment/<comment_id>")
 @login_required
 def delete_comment(comment_id):
     comment = Comment.query.filter_by(id=comment_id).first()
