@@ -49,7 +49,7 @@ def create_post():
             db.session.add(post)
             db.session.commit()
             flash("Post created!", category="success")
-            return redirect(url_for("views.home"))
+            return redirect(url_for("views.blog"))
 
 
     return render_template("create_post.html", user=current_user)
@@ -70,7 +70,7 @@ def delete_post(id):
         flash("Post deleted.", category="success")
     return redirect(url_for("views.blog"))
 
-# create  blog comment route
+# create blog comment route
 @views.route("/create-comment/<post_id>", methods=['POST'])
 # user must be logged in to post
 @login_required
@@ -90,3 +90,17 @@ def create_comment(post_id):
     return redirect(url_for("views.blog"))
 
 
+# delete blog comment route
+@views.route("/delete-comment/<comment_id")
+@login_required
+def delete_comment(comment_id):
+    comment = Comment.query.filter_by(id=comment_id).first()
+    if not comment:
+            flash("Comment does not exist.", ategory="error")
+    elif current_user.id != comment.author and current_user.id != comment.post.author:
+        flash("You do not have permission to delete this comment.", category="error")
+    else:
+        db.session.delete(comment)
+        db.session.commit()
+        flash("Comment deleted.", category="success")
+    return redirect(url_for("views.blog"))
