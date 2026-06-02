@@ -21,7 +21,7 @@ class Post(db.Model):
     content = db.Column(db.Text, nullable=False)
     date_created = db.Column(db.DateTime(timezone=True), default=func.now())
     author = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'), nullable=False)
-    comments = db.relationship('Comment', backref='post', passive_deletes=True)
+    comments = db.relationship('Comment', backref='post', cascade="all, delete-orphan")
 
 
 # create comment database
