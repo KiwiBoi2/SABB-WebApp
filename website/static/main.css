@@ -1,16 +1,25 @@
-/*Template Styles*/
+/*General Styles*/
+h1, h2, h3, h4, h5, h6{
+    color: rgb(255, 255, 255);
+}
+
 nav{
     background-color: rgb(163, 23, 23);
 }
 
-a.nav-link{
+
+
+/*Nav Styles*/
+
+.navbar .nav-link {
+    display: block;
     color: rgb(255, 255, 255);
-   
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-a.nav-link:hover{
-    color: rgb(255, 255, 255);
-    background-color: rgb(143, 6, 6);
-   
+
+.navbar .nav-link:hover {
+    background-color: rgb(183, 23, 23);
 }
 
 /*Home Page Shenanigans*/
