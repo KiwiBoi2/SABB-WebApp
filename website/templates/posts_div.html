@@ -3,12 +3,13 @@
 
 <!-- post content -->
 {% block content %} 
-<h1>Blog Posts</h1> 
+<h1>Blog Posts</h1>
+<img src="/static/images/dog.jpg" alt="Placeholder" class="img-background"/> 
 <div id="posts">
     {% for post in posts%}
     <div class="card border-dark">
-        <div class="card-header d-flex justify-content-between align-items-centre">
-            <a href="/posts/{{post.user.username}}">
+        <div class="card-header d-flex justify-content-between align-items-centre" class="post-title">
+            <a href="/posts/{{post.user.username}}" class="username-link">
                 {{post.user.username}}
             </a>
             <!-- start of delete dropdown menu -->
