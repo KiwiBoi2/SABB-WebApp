@@ -32,6 +32,26 @@ nav{
 
 }
 
+/*Footer*/
+div.footer{
+    background-color: rgb(23, 23, 23);;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    padding-bottom: 10px;
+    z-index: 0;
+}
+
+
+
+h3.footer-copyright{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
 /*Home Page Shenanigans*/
 h1.title-text{
     position: relative;
