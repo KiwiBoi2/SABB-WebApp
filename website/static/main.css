@@ -60,6 +60,10 @@ h1.title-text{
     margin-top: 20px;
 }
 
+div.banner-container{
+    margin-left: 3%;
+}
+
 img.img-background{
     position: fixed;
     top: 0;
@@ -70,8 +74,10 @@ img.img-background{
     object-fit: cover;
 }
 
-img.banner{
-    width: 90%;
+img.home-banner{
+    width: 75%;
+    height: 500px;
+    border-radius: 10px;
     object-fit: cover;
 }
 
