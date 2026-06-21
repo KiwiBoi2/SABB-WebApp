@@ -97,6 +97,35 @@ a.username-link{
     text-transform: capitalize;
 }
 
+/*Post Stuff*/
+div.create-post-container{
+    align-items: center;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+h1.post-create-title{
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-left : 2%;
+}
+
+form.create-post{
+    align-items: center;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 20px;
+
+}
+
+div.card-backing {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.85;
+    border-radius: 10px;
+    padding: 1.5%;
+    outline: solid 1px rgb(0, 0, 0);
+}
+
 /*Comment Stuff*/
 button.btn.btn-sm.btn-primary.dropdown-toggle{
     background-color: rgb(163, 23, 23);
