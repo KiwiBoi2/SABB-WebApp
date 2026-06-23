@@ -97,6 +97,12 @@ a.username-link{
     text-transform: capitalize;
 }
 
+div.home-content-container{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 20px;
+}
+
 /*Post Stuff*/
 div.create-post-container{
     align-items: center;
