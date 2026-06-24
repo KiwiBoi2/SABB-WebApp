@@ -34,12 +34,10 @@ nav{
 
 /*Footer*/
 div.footer{
-    background-color: rgb(23, 23, 23);;
-    bottom: 0;
-    width: 100%;
-    position: absolute;
-    padding-bottom: 10px;
-    z-index: 0;
+    background-color: #1c1c1e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
 }
 
 
@@ -49,6 +47,10 @@ h3.footer-copyright{
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
+}
+
+section.contact{
+    align-items: center;
 }
 
 
