@@ -204,6 +204,14 @@ nav{
     .widget:last-child { border-bottom: none; }
 }
 
+.instagram-icon {
+    scale: 0.075;
+}
+
+.camera-icon {
+    padding-bottom: 30px;
+    scale: 0.09;
+}
 
 /*Home Page Shenanigans*/
 h1.title-text{
@@ -232,6 +240,14 @@ img.home-banner{
     height: 500px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.content-container.home{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.85;
+    border-radius: 10px;
+    padding: 1.5%;
+    outline: solid 1px rgb(0, 0, 0);
 }
 
 /*Blog Stuff*/
