@@ -15,7 +15,9 @@ nav{
     z-index: 1020;
 }
 
-
+.footer-spacer {
+    line-height: 300%;
+}
 
 /*Nav Styles*/
 
