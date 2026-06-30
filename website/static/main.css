@@ -4,6 +4,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 body{
+    margin: 0;
     padding-top: 0px;
 }
 
@@ -213,6 +214,20 @@ nav{
     scale: 0.09;
 }
 
+/*Custom CSS Button color for navbar*/
+/*Normal state*/
+.btn-custom-color {
+    background-color: rgb(163, 23, 23);
+    color: rgb(255, 255, 255);
+}
+
+/*Hover state*/
+.btn-custom-color:hover,
+.btn-custom-color:focus {
+    background-color: rgb(183, 23, 23);
+    color: rgb(255, 255, 255);
+}
+
 /*Home Page Shenanigans*/
 h1.title-text{
     position: relative;
@@ -222,7 +237,8 @@ h1.title-text{
 }
 
 div.banner-container{
-    margin-left: 3%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 img.img-background{
@@ -245,9 +261,16 @@ img.home-banner{
 .content-container.home{
     background-color: rgb(255, 255, 255);
     opacity: 0.85;
-    border-radius: 10px;
     padding: 1.5%;
-    outline: solid 1px rgb(0, 0, 0);
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+.content-section {
+    width: 100%;
+    margin: 0;
 }
 
 /*Blog Stuff*/

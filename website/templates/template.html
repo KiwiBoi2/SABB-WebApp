@@ -31,9 +31,14 @@
                     <a class="nav-link" href="/logout">Logout</a>
                     </div>
                     {% else %}
-                    <div class="navbar-nav">
-                    <a class="nav-link" href="/login">Login</a>
-                    <a class="nav-link" href="/sign-up">Signup</a>
+                    <div class="dropdown">
+                        <button class="btn btn-custom-color dropdown-hover" type="button" data-bs-toggle="dropdown">
+                            Account
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/login">Login</a></li>
+                            <li><a class="dropdown-item" href="/sign-up">Signup</a></li>
+                        </ul>
                     </div>
                     {% endif %}
                 </div>
