@@ -258,6 +258,36 @@ img.home-banner{
     height: 500px;
     border-radius: 10px;
     object-fit: cover;
+    margin-left: 1.5%;
+}
+
+/*Carousel tomfoolery*/
+.carousel .reel {
+    white-space: nowrap;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 2em 0 2em;
+}
+
+.carousel article{
+    display: inline-block;
+    width: 18em;
+    background: #fff;
+    text-align: center;
+    padding: 0 1em 3em 1em;
+    margin: 0 2em 0 0;
+    white-space: normal;
+    opacity: 1.0;
+    -moz-transition: opacity 0.75s ease-in-out;
+    -webkit-transition: opacity 0.75s ease-in-out;
+    -ms-transition: opacity 0.75s ease-in-out;
+    transition: opacity 0.75s ease-in-out;
+}
+
+
+
+.welcome {
+    margin-left: 2.5%;
 }
 
 .content-container.home{
@@ -270,9 +300,16 @@ img.home-banner{
     box-sizing: border-box;
 }
 
-.content-section {
-    width: 100%;
-    margin: 0;
+.content-text-title.home{
+    margin-left: 3.5%;
+    color:rgb(0, 0, 0);
+    line-height: 1.6;
+}
+
+.content-text.home{
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+    margin-left: 4%;
 }
 
 /*Blog Stuff*/
