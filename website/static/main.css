@@ -255,10 +255,11 @@ img.img-background{
 
 img.home-banner{
     width: 75%;
-    height: 500px;
+    height: 700px;
     border-radius: 10px;
     object-fit: cover;
     margin-left: 1.5%;
+    opacity: 0.85;
 }
 
 /*Carousel tomfoolery*/
