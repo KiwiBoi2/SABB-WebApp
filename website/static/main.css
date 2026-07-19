@@ -262,6 +262,22 @@ img.home-banner{
 }
 
 /*Carousel tomfoolery*/
+div.carousel.header{
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+}
+h2.carousel-title{
+    text-align: center;
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 2;
+    background-color: rgba(183, 23, 23, 0.9);
+    position: absolute;
+}
 
 	.carousel {
 		position: relative;
