@@ -117,10 +117,9 @@ nav{
 }
 
 .photo-thumb {
-    aspect-ratio: 1;
+    max-width: 100%;
     border-radius: 3px;
     display: block;
-    background: linear-gradient(135deg, #7a6555, #5c6a7a);
 }
 
 .photo-thumb:nth-child(2) { background: linear-gradient(135deg, #4a5f78, #6a7a8a); }
@@ -266,18 +265,15 @@ img.home-banner{
 div.carousel.header{
     position: relative;
     align-items: center;
-    overflow: hidden;
     height: 150px;
-    background-color: rgb(255, 255, 255);
 }
+
 h2.carousel-title{
     text-align: center;
-    font-size: 2.5em;
     color: rgb(255, 255, 255);
     font-weight: bold;
     line-height: 2;
     background-color: rgba(183, 23, 23, 0.9);
-    position: absolute;
 }
 
 	.carousel {
@@ -327,7 +323,6 @@ h2.carousel-title{
 				-o-transition: background-color 0.35s ease-in-out;
 				-ms-transition: background-color 0.35s ease-in-out;
 				transition: background-color 0.35s ease-in-out;
-				-webkit-backface-visibility: hidden;
 			}
 
 			.carousel .forward:after, .carousel .backward:after {
@@ -423,12 +418,15 @@ h2.carousel-title{
 
 .welcome {
     margin-left: 2.5%;
+    padding-top: 5%;
+    padding-bottom: 1%;
 }
 
 .content-container.home{
     background-color: rgb(255, 255, 255);
     opacity: 0.85;
     padding: 1.5%;
+    height: 500px;
     margin: 0;
     width: 100%;
     max-width: none;
