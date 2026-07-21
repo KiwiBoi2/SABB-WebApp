@@ -9,7 +9,7 @@ body{
 }
 
 nav{
-    background-color: rgb(163, 23, 23);
+    background-color: rgb(140, 22, 22);
     position: fixed;
     top: 0;
     z-index: 1020;
@@ -17,6 +17,15 @@ nav{
 
 .footer-spacer {
     line-height: 300%;
+}
+
+.page-title{
+    color: rgb(255, 255, 255);
+    background-color: rgb(163, 23, 23);
+    padding: 10px;
+    text-align: left;
+    padding-left: 10%;
+    font-weight: bold;   
 }
 
 /*Nav Styles*/
@@ -218,7 +227,7 @@ nav{
 /*Custom CSS Button color for navbar*/
 /*Normal state*/
 .btn-custom-color {
-    background-color: rgb(163, 23, 23);
+    background-color: rgb(140, 23, 23);
     color: rgb(255, 255, 255);
 }
 
@@ -475,6 +484,17 @@ div.home-content-container{
     padding-right: 2.5%;
     padding-top: 20px;
 }
+
+/*Login Page*/
+.login-page{
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    height: 300px;
+
+}
+
+
 
 /*Post Stuff*/
 div.create-post-container{
