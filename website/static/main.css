@@ -250,6 +250,7 @@ img.img-background{
     height: 100%;
     z-index: -1;
     object-fit: cover;
+    filter: brightness(0.65);
 }
 
 img.home-banner{
@@ -264,16 +265,24 @@ img.home-banner{
 /*Carousel tomfoolery*/
 div.carousel.header{
     position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 120px;
+    margin-bottom: 0;
 }
 
 h2.carousel-title{
     text-align: center;
     color: rgb(255, 255, 255);
     font-weight: bold;
-    line-height: 2;
+    line-height: 1;
     background-color: rgba(183, 23, 23, 0.9);
+    white-space: nowrap;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    margin: 0;
+    margin-top: 30px;
 }
 
 	.carousel {
