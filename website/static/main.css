@@ -274,8 +274,7 @@ img.home-banner{
 /*Events tomfoolery*/
 section.events-section{
     background-color: rgb(255, 255, 255, 0.9);
-    padding: 1.5%;
-    height: 500px;
+    padding : 1.5%;
     margin: 0;
     width: 100%;
     max-width: none;

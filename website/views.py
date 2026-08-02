@@ -18,7 +18,17 @@ views = Blueprint("views", "__name__")
 # returns homepage
 def home():
     return render_template("home.html", user=current_user)
-    
+
+# gallery route
+@views.route("/gallery")
+
+# gallery route function
+# returns gallery page
+def gallery():
+    return render_template("gallery.html", user=current_user)
+
+
+
 # blog page route
 @views.route("/blog")
 # user must be logged in
