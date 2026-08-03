@@ -288,6 +288,12 @@ section.events-section{
         align-items: center;
     }
 
+    .events-image{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
         .events-title{
             line-height: 1.6;
             font-weight: bold;
@@ -313,6 +319,20 @@ section.events-section{
             
         }
 
+            /* Ensure images inside event columns fit and don't overflow */
+            .event-img{
+                width: 100%;
+                height: auto;
+                max-height: 10%;
+                object-fit: cover;
+                border-radius: 5px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            /* Prevent column content from overflowing its box */
+            .column{ overflow: hidden; }
+
             .content-text-title{
                 color:rgb(0, 0, 0);
                 line-height: 1.6;
@@ -329,11 +349,11 @@ section.events-section{
     background-color: rgb(255, 255, 255);
     opacity: 0.85;
     padding: 1.5%;
-    height: 500px;
     margin: 0;
     width: 100%;
     max-width: none;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .content-text-title.home{
@@ -346,6 +366,8 @@ section.events-section{
     color: rgb(0, 0, 0);
     line-height: 1.6;
     margin-left: 4%;
+    max-height: 300px;
+    overflow-y: hidden;
 }
 
 /*Blog Stuff*/
