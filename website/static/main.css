@@ -251,7 +251,9 @@ div.banner-container{
     place-items: center;
     margin: auto;
     padding: auto;
+    max-height: 700px;
     border: solid 1px rgb(255, 255, 255);
+    overflow: hidden;
 }
 
 img.img-background{
@@ -263,13 +265,29 @@ img.img-background{
     z-index: -1;
     object-fit: cover;
     filter: brightness(0.65);
+    background-color: rgb(0, 0, 0);
 }
 
 img.home-banner{
     width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
     padding-top: 50px;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center top;
+    object-position: center bottom;
+    object-position: center -50px;
+
+}
+
+img.banner-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    object-fit: cover;
+    object-position: center top;
+    object-position: center bottom;
 }
 
 /*Events tomfoolery*/
@@ -341,8 +359,10 @@ section.events-section{
 
 
 .welcome {
-    margin-left: 2.5%;
-    padding-top: 5%;
+    padding-top: 110px;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
     padding-bottom: 1%;
 }
 
