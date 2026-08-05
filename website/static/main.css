@@ -330,8 +330,8 @@ section.events-section{
             height: 100%;
             width: 27%;
             padding: 10px;
-            border: solid 1px rgb(0, 0, 0, 0.75);
-            
+            border: solid 2px rgba(0, 0, 0);
+            border-radius: 5px;
         }
 
             /* Ensure images inside event columns fit and don't overflow */
