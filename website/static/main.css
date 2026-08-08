@@ -372,6 +372,17 @@ section.events-section{
     overflow: hidden;
 }
 
+#posts {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+    box-sizing: border-box;
+}
+
+#posts .card.border-dark {
+    margin-bottom: 24px;
+}
+
 .content-text-title.home{
     margin-left: 3.5%;
     color:rgb(0, 0, 0);
