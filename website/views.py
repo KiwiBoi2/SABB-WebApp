@@ -81,6 +81,7 @@ def delete_post(id):
         flash("Post deleted.", category="success")
     return redirect(url_for("views.blog"))
 
+
 # create blog comment route
 @views.route("/create-comment/<post_id>", methods=['POST'])
 # user must be logged in to post
@@ -100,6 +101,17 @@ def create_comment(post_id):
             flash("Comment does not exist.", category="error")
     return redirect(url_for("views.blog"))
 
+# view user posts route
+@views.route("/posts/<username>")
+@login_required
+def posts(username):
+    page = request.args.get('page', 1, type=int)
+    user = User.query.filter_by(username=username).first()
+    if not user:
+        flash("No user with that username exists.", category="error")
+        return redirect(url_for("views.blog"))
+    posts = Post.query.filter_by(user=user).order_by(Post.date_created.desc()).paginate(page=page, per_page=4)
+    return render_template("posts.html", user=current_user, posts=posts, username=username)
 
 # delete blog comment route
 @views.route("/delete-comment/<comment_id>")
