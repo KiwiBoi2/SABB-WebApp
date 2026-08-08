@@ -6,7 +6,7 @@
 <div class="banner-container">
     <img src="/static/images/SABB-Logo-White.png" class="blog-banner"/>
 </div> 
-<h1 align="center">Recommendations</h1>
+<h1 align="center">List of Recommendations</h1>
 <img src="#" alt="Placeholder" class="img-background"/>
 
 <div id="posts">
@@ -99,11 +99,15 @@
     <br/> 
     {% endfor %}
 </div>
+<!-- pagination code start -->
+{% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=1) %}
+
+<!-- pagination code end -->
 {% block footer %}
 <div align="center">
     <a href="/create-post">
         <button type="button" class="btn btn-primary btn-large">
-            Create Post
+            Post a Suggestion
         </button>
     </a>
     <br/>
