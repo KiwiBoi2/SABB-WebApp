@@ -16,7 +16,7 @@ nav{
 }
 
 .footer-spacer {
-    line-height: 300%;
+    height: 150px;    
 }
 
 .page-title{
@@ -467,15 +467,6 @@ div.home-content-container{
     padding: 0.6rem 0.85rem;
 }
 
-/*Login Page*/
-.login-page{
-    margin-left: 10%;
-    margin-right: 10%;
-    align-items: center;
-    height: 300px;
-
-}
-
 img.blog-banner{
     max-width: 50%;
     padding-top: 30px;
@@ -486,6 +477,23 @@ img.blog-banner{
 }
 
 
+/*Login Page*/
+.login-page{
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    height: 300px;
+
+}
+
+/*Signup Page*/
+.signup-page{
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    height: 300px;
+    padding-bottom: 10%;
+}
 
 
 /*Post Stuff*/
