@@ -118,15 +118,16 @@ def delete_comment(comment_id):
 
 
 # like route
-@views.route("/like-post<post.id>", methods=["POST"])
+@views.route("/like-post/<post_id>", methods=["POST"])
 # user must be logged in to like
 @login_required
 def like(post_id):
     post = Post.query.filter_by(id=post_id).first()
-    like = Like.query.filter_by(author=current_user.id, post=post_id).first()
     if not post:
-        return jsonify({'error': 'Post does not exist.'}, 400)
-    elif like:
+        return jsonify({'error': 'Post does not exist.'}), 400
+
+    like = Like.query.filter_by(author=current_user.id, post_id=post_id).first()
+    if like:
         db.session.delete(like)
         db.session.commit()
     else:
@@ -134,4 +135,4 @@ def like(post_id):
         db.session.add(like)
         db.session.commit()
 
-    return jsonify({"likes": len(post.likes), "liked": current_user.id in map(lambda x: x.author, post.likes)})
+    return jsonify({"likes": len(post.likes),"liked": current_user.id in map(lambda x: x.author, post.likes)}), 200
