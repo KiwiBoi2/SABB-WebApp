@@ -9,6 +9,18 @@
 <h1 align="center">List of Recommendations</h1>
 <img src="#" alt="Placeholder" class="img-background"/>
 
+{% block header %}
+<div align="center">
+    <a href="/create-post">
+        <button type="button" class="btn btn-primary btn-large">
+            Post a Suggestion
+        </button>
+    </a>
+    <br/>
+</div>
+<br/>
+{% endblock %}
+
 <div id="posts">
     {% for post in posts%}
     <div class="card border-dark">
@@ -119,16 +131,4 @@
     {% endfor %}
 </div>
 <!-- pagination code end -->
-{% block footer %}
-<div align="center">
-    <a href="/create-post">
-        <button type="button" class="btn btn-primary btn-large">
-            Post a Suggestion
-        </button>
-    </a>
-    <br/>
-</div>
-<br/>
-{% endblock %}
-
 {% endblock %}
