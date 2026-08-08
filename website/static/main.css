@@ -467,6 +467,28 @@ div.home-content-container{
     padding: 0.6rem 0.85rem;
 }
 
+/*create and colour post and comment buttons*/
+/*use a[href] to refer to buttons only on the post page */
+a[href="/create-post"] .btn-primary,
+form.input-group.mb-3 .btn-primary,
+button.btn.btn-sm.btn-primary.dropdown-toggle {
+    background-color: rgb(163, 23, 23);
+    border-color: rgb(163, 23, 23);
+    color: rgb(255, 255, 255);
+}
+
+a[href="/create-post"] .btn-primary:hover,
+a[href="/create-post"] .btn-primary:focus,
+form.input-group.mb-3 .btn-primary:hover,
+form.input-group.mb-3 .btn-primary:focus,
+button.btn.btn-sm.btn-primary.dropdown-toggle:hover,
+button.btn.btn-sm.btn-primary.dropdown-toggle:focus {
+    background-color: rgb(183, 23, 23);
+    border-color: rgb(183, 23, 23);
+    color: rgb(255, 255, 255);
+}
+
+
 img.blog-banner{
     max-width: 50%;
     padding-top: 30px;
@@ -529,6 +551,11 @@ div.card-backing {
 button.btn.btn-sm.btn-primary.dropdown-toggle{
     background-color: rgb(163, 23, 23);
     border-color: rgb(163, 23, 23);
+}
+
+button.btn.btn-sm.btn-primary.dropdown-toggle:hover{
+    background-color: rgb(183, 23, 23);
+    border-color: rgb(183, 23, 23);
 }
 
 small{
