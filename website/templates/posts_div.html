@@ -12,17 +12,28 @@
             <a href="/posts/{{post.user.username}}" class="username-link">
                 {{post.user.username}}
             </a>
-            <!-- start of delete dropdown menu -->
-            {% if user.id == post.author %}
-            <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a>
-                    </li>
-                </ul>
-            </div>          
-            {% endif %}
+            <!-- start of likes section -->
+            <!-- start of likes div -->
+            <div>
+                <span id="likes-count-{{post.id}}">{{post.likes|length}}</span>
+
+
+
+                    <!-- end of likes section -->
+                    <!-- start of delete dropdown menu -->
+                    {% if user.id == post.author %}
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a>
+                            </li>
+                        </ul>
+                    </div>          
+                    {% endif %}
+
+            </div>
+            <!-- end of likes div -->
             <!-- end of delete dropdown menu -->
         </div>
 
