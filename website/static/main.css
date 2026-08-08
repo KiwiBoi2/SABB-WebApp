@@ -239,6 +239,14 @@ nav{
 }
 
 /*Home Page Shenanigans*/
+.welcome-title{
+    color: rgb(255, 255, 255);
+    background-color: rgb(163, 23, 23);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;   
+}
+
 h1.title-text{
     position: relative;
     z-index: 1;
