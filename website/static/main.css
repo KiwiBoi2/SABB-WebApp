@@ -428,6 +428,14 @@ div.home-content-container{
 
 }
 
+img.blog-banner{
+    max-width: 50%;
+    padding-top: 30px;
+    object-fit: cover;
+    object-position: center top;
+    object-position: center bottom;
+}
+
 
 
 /*Post Stuff*/
