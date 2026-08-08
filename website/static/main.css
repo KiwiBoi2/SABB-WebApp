@@ -419,6 +419,54 @@ div.home-content-container{
     padding-top: 20px;
 }
 
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.pagination-wrapper a,
+.pagination-wrapper .pagination-ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-wrapper .btn-info,
+.pagination-wrapper .btn-outline-info {
+    min-width: 42px;
+}
+
+.pagination-wrapper .btn-info {
+    color: #ffffff;
+    background-color: #a32626;
+    border-color: #a32626;
+}
+
+.pagination-wrapper .btn-info:hover,
+.pagination-wrapper .btn-info:focus {
+    background-color: #c13c3c;
+    border-color: #c13c3c;
+}
+
+.pagination-wrapper .btn-outline-info {
+    color: #a32626;
+    border-color: #a32626;
+}
+
+.pagination-wrapper .btn-outline-info:hover,
+.pagination-wrapper .btn-outline-info:focus {
+    background-color: #a32626;
+    color: #ffffff;
+}
+
+.pagination-ellipsis {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 0.85rem;
+}
+
 /*Login Page*/
 .login-page{
     margin-left: 10%;
