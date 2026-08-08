@@ -6,6 +6,11 @@ from flask_login import current_user, login_required
 from . import db
 from .models import User, Post, Comment, Like
 
+#import from .forms
+from .forms import PostForm
+
+
+
 # set views as blueprint 
 views = Blueprint("views", "__name__")
 
@@ -81,6 +86,30 @@ def delete_post(id):
         flash("Post deleted.", category="success")
     return redirect(url_for("views.blog"))
 
+# update blog post route
+@views.route("/update-post/<id>", methods=["GET", "POST"])
+# user must be logged in
+@login_required
+def update_post(id):
+    post = Post.query.filter_by(id=id).first()
+    if post.author != current_user.id:
+        flash("You cannot edit this post!", category="error")
+    form = PostForm()
+    if form.validate_on_submit():
+        post.title = form.title.data
+        post.content = form.content.data
+        db.session.commit()
+        flash("Post updated", category="success")
+        page = request.args.get('page', 1, type=int)
+        posts = Post.query.order_by(Post.date_created.desc()).paginate(page=page, per_page=4)
+        return render_template("blog.html", user=current_user, posts=posts)
+
+    elif request.method == "GET":
+        form.title.data = post.title
+        form.content.data = post.content
+
+    return render_template("update_post.html", form=form, user=current_user, posts=post)
+
 
 # create blog comment route
 @views.route("/create-comment/<post_id>", methods=['POST'])
@@ -127,8 +156,6 @@ def delete_comment(comment_id):
         db.session.commit()
         flash("Comment deleted.", category="success")
     return redirect(url_for("views.blog"))
-
-
 
 # like route
 @views.route("/like-post/<post_id>", methods=["POST"])
