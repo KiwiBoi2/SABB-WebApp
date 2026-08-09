@@ -4,11 +4,12 @@
 
 <!-- update post page content -->
 {% block content %}
-<div class="content-section">
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Update Post</legend>
+<div class="create-post-container">
+    <div class="card-backing">
+        <form method="POST" class="create-post" action="">
+            {{ form.hidden_tag() }}
+            <h1 align="center">Update Post</h1>
+            <br>
             <div class="form-group">
                 {{ form.title.label(class="form-control-label") }}
                 {% if form.title.errors %}
@@ -22,10 +23,7 @@
                     {{ form.title(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
-        </fieldset>
-        <br>
-
-        <fieldset class="form-group">
+            <br>
             <div class="form-group">
                 {{ form.content.label(class="form-control-label") }}
                 {% if form.content.errors %}
@@ -39,11 +37,11 @@
                     {{ form.content(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
-        </fieldset>
-        <br>
-            <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+            <br>
+            <div class="form-group" align="center">
+                {{ form.submit(class="btn btn-primary") }}
             </div>
-    </form>
+        </form>
+    </div>
 </div>
 {% endblock %}
