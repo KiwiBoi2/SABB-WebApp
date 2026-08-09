@@ -165,25 +165,6 @@ nav{
     line-height: 1.6;
 }
 
-.social-bar {
-    display: inline-flex;
-    gap: 0;
-    background: rgba(255,255,255,0.06);
-    border-radius: 40px;
-    padding: 10px 24px;
-    margin-bottom: 48px;
-}
-
-.social-bar a {
-    color: #fff;
-    font-size: 1.25rem;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.social-bar a:hover { color: #a78bfa; }
-
 .footer-meta {
     font-size: 0.78rem;
     color: #45454e;
@@ -247,13 +228,6 @@ nav{
     font-weight: bold;   
 }
 
-h1.title-text{
-    position: relative;
-    z-index: 1;
-    color: rgb(255, 255, 255);
-    margin-top: 20px;
-}
-
 div.banner-container{
     display: flex;
     place-items: center;
@@ -311,11 +285,6 @@ section.events-section{
         align-items: center;
     }
 
-    .events-image{
-        width: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-    }
 
         .events-title{
             line-height: 1.6;
@@ -362,13 +331,6 @@ section.events-section{
             }
 
 
-.welcome {
-    padding-top: 110px;
-    padding-left: auto;
-    padding-right: auto;
-    text-align: center;
-    padding-bottom: 1%;
-}
 
 .content-container.home{
     background-color: rgb(255, 255, 255, 0.9);
@@ -419,12 +381,6 @@ a.username-link{
     opacity: 1;
     text-decoration: none;
     text-transform: capitalize;
-}
-
-div.home-content-container{
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    padding-top: 20px;
 }
 
 .pagination-wrapper {
@@ -531,12 +487,6 @@ div.create-post-container{
     align-items: center;
     margin-left: 2.5%;
     margin-right: 2.5%;
-}
-
-h1.post-create-title{
-    color: rgb(0, 0, 0);
-    margin-top: 20px;
-    margin-left : 2%;
 }
 
 form.create-post{
