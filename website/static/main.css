@@ -273,6 +273,10 @@ img.banner-overlay{
     z-index: 2;
 }
 
+section.welcome-section{
+    margin-top: 100px;
+}
+
 .welcome-master-div{
     display: flex;
     gap: 20px;
