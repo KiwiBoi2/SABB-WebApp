@@ -587,3 +587,17 @@ form.input-group.mb-3{
     max-height: 500px;
     overflow: hidden;
 }
+
+.notices-text{
+    max-width: 65%;
+    width: auto;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.notices-paragraph{
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
