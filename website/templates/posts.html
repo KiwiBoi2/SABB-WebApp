@@ -2,17 +2,17 @@
 {% extends "template.html" %} {% block title %} Home {% endblock %}
 
 <!-- post content -->
-{% block content %} 
+{% block content %}
 <div class="banner-container">
-    <img src="/static/images/SABB-Logo-White.png" class="blog-banner"/>
-</div> 
+    <img src="/static/images/SABB-Logo-White.png" class="blog-banner" alt="banner">
+</div>
 <h1 align="center">List of Recommendations</h1>
-<img src="#" alt="Placeholder" class="img-background"/>
+<img src="#" alt="Placeholder" class="img-background">
 
 <div id="posts">
     {% for post in posts%}
     <div class="card border-dark">
-        <div class="card-header d-flex justify-content-between align-items-center" class="post-title">
+        <div class="card-header d-flex justify-content-between align-items-center post-title">
             <a href="/posts/{{post.user.username}}" class="username-link">{{post.user.username}}</a>
 
             <!-- start of likes section -->
@@ -35,7 +35,7 @@
                                 <a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a>
                             </li>
                         </ul>
-                    </div>          
+                    </div>
                     {% endif %}
 
             </div>
@@ -50,15 +50,15 @@
             <div class="card-text">{{post.content}}</div>
         </div>
         <!-- start comment code -->
-        <br/>
+        <br>
         <div class="collapse" id="comments-{{post.id}}">
             <div class="card">
                 <div class="card-body" id="comments-expanded-{{post.id}}">
-                   {% for comment in post.comments %} 
+                   {% for comment in post.comments %}
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <a href="/posts/{{comment.user.username}}">{{comment.user.username}}</a>: {{comment.text}}
-                        </div> 
+                        </div>
                         <div>
                             <small class="text-muted">{{comment.date_created}}</small>
                             {% if user.id == comment.author or user.id == post.author %}
@@ -73,7 +73,7 @@
                             {% endif %}
                         </div>
                     </div>
-                   {% endfor %} 
+                   {% endfor %}
                 </div>
             </div>
         </div>
@@ -89,14 +89,14 @@
         </p>
         <!-- comment input form -->
         <form class="input-group mb-3" method="POST" action="/create-comment/{{post.id}}">
-            <input type="text" id="text" name="text" class="form-control" placeholder="Comment something!"/>
+            <input type="text" id="text" name="text" class="form-control" placeholder="Comment something!">
             <button type="submit" class="btn btn-primary">Comment</button>
         </form>
 
         <!-- end comment code -->
         <div class="card-footer text-muted">{{post.date_created}}</div>
     </div>
-    <br/> 
+    <br> 
     {% endfor %}
 </div>
 <!-- pagination code start -->

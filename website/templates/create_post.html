@@ -2,27 +2,26 @@
 {% extends "template.html" %} {% block title %} Create Post {% endblock %}
 
 <!-- post page content -->
-{% block content %} 
+{% block content %}
 <div class="banner-container">
-    <img src="/static/images/SABB-Logo-White.png" class="blog-banner"/>
-</div> 
-<h1 align="center">Suggest Something</h1> 
-<img class="img-background" src="#"/>
-    <div class="create-post-container">
-        <div class="card-backing">
-            <form method="POST" class="create-post">
-                <!-- blog title form -->
-                <label for="title">Recommendation Name</label>
-                <input type="text" id="title" name="title" class="form-control" placeholder="Suggestion name here..."/>
-                <br/>
-                <!-- blog content text area -->
-                <textarea name="content" id="content" class="form-control" placeholder="Additional information here..."></textarea> 
-                <br/>
-                <!-- submit button-->
-                <div align="center">
-                <button class="btn btn-primary" type="submit">Submit Recommendation</button>
-                </div>
-            </form>
-        </div>
+    <img src="/static/images/SABB-Logo-White.png" class="blog-banner" alt="SABB Logo">
+</div>
+<h1 align="center">Suggest Something</h1>
+<div class="create-post-container">
+    <div class="card-backing">
+        <form method="POST" class="create-post">
+            <!-- blog title form -->
+            <label for="title">Recommendation Name</label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="Suggestion name here...">
+            <br>
+            <!-- blog content text area -->
+            <textarea name="content" id="content" class="form-control" placeholder="Additional information here..."></textarea>
+            <br>
+            <!-- submit button-->
+            <div align="center">
+            <button class="btn btn-primary" type="submit">Submit Recommendation</button>
+            </div>
+        </form>
     </div>
+</div>
 {% endblock %}
