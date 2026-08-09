@@ -3,6 +3,10 @@ h1, h2, h3, h4, h5, h6{
     color: rgb(255, 255, 255);
 }
 
+label{
+    color: rgb(255, 255, 255);
+}
+
 body{
     margin: 0;
     padding-top: 0px;
@@ -503,6 +507,9 @@ img.blog-banner{
     padding-bottom: 10%;
 }
 
+div.form-text{
+    color: rgb(255, 255, 255);
+}
 
 /*Post Stuff*/
 div.create-post-container{
